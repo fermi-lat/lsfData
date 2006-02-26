@@ -11,7 +11,7 @@
 
 /** @class MetaEvent
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfMetaEvent.h,v 1.1.1.1 2006/02/21 17:21:25 heather Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfMetaEvent.h,v 1.1.1.1 2006/02/25 08:38:50 heather Exp $
 */
 
 namespace lsfData {
@@ -89,7 +89,7 @@ namespace lsfData {
       m_datagram = datagram;
       m_scalers = scalers;
       m_time = time;
-      delete m_config;
+      if(m_config) delete m_config;
       m_config = configuration.clone();
       m_type = configuration.type();
     }

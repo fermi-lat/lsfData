@@ -7,7 +7,7 @@
 /** @class GemScalers
 * @brief FIXME
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfGemScalers.h,v 1.1.1.1 2006/02/21 17:21:25 heather Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfGemScalers.h,v 1.1.1.1 2006/02/25 08:38:50 heather Exp $
 */
 
 
@@ -73,7 +73,8 @@ namespace lsfData {
 
     /// Fill the output stream (ASCII)
     std::ostream& fillStream( std::ostream& s ) const {
-      s << " scalers:  elapsed   = 0x" << std::hex << std::setfill('0')
+      s << " scalers:  elapsed   = 0x" << std::hex << std::nouppercase
+        << std::setfill('0') << std::setw(8)
         << elapsed() << " = " << std::dec << elapsed() << "\n"
         << " scalers:  livetime  = 0x" << std::hex << livetime() << " = "
         << std::dec << livetime() << "\n"

@@ -10,7 +10,7 @@
 *
 * 
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfRunInfo.h,v 1.1.1.1 2006/02/21 17:21:25 heather Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfRunInfo.h,v 1.1.1.1 2006/02/25 08:38:50 heather Exp $
 */
 
 namespace lsfData {
@@ -55,7 +55,8 @@ namespace lsfData {
 
     /// Fill the output stream (ASCII)
     std::ostream& fillStream( std::ostream& s ) const {
-      s << " run:      groundid = 0x" << std::hex << std::setfill('0') 
+      s << " run:      groundid = 0x" << std::hex << std::uppercase
+        << std::setfill('0') << std::setw(8)
         << id() << std::dec << ", started = 0x" << std::hex 
         << startTime() << std::dec << " (" << startTime() << ")\n"
         << " run:      platform = (" << platform() << ")\n"

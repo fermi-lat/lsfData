@@ -10,7 +10,7 @@
 /** @class LsfEvent::Configuration
 * @brief FIXME
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfConfiguration.h,v 1.1.1.1 2006/02/21 17:21:25 heather Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfConfiguration.h,v 1.1.1.1 2006/02/25 08:38:50 heather Exp $
 */
 
 namespace lsfData {
@@ -113,7 +113,7 @@ namespace lsfData {
     }
 
     /// This is a poor-man's dynamic cast
-    virtual LpaConfiguration* castToLpaConfig() { return this; };
+    virtual const LpaConfiguration* castToLpaConfig() const { return this; };
     
     /// What type of configuration is this?
     virtual enums::Lsf::RunType type() const { return enums::Lsf::LPA; }    
@@ -132,7 +132,7 @@ namespace lsfData {
     
     //  Set individual values
     void setHardwareKey( unsigned int value ) { m_hardwareKey = value; }
-    void setSoftwareKey( unsigned int value ) { m_hardwareKey = value; }  
+    void setSoftwareKey( unsigned int value ) { m_softwareKey = value; }  
     
     
   private:
