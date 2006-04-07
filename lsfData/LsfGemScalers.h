@@ -7,7 +7,7 @@
 /** @class GemScalers
 * @brief FIXME
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfGemScalers.h,v 1.1.1.1 2006/02/25 08:38:50 heather Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfGemScalers.h,v 1.2 2006/02/26 08:12:09 heather Exp $
 */
 
 
@@ -58,11 +58,12 @@ namespace lsfData {
     }
 
     void print() const {
-      printf(" scalers:  elapsed   = 0x%08x = %lld \n", elapsed(), elapsed());
-      printf(" scalers:  livetime  = 0x%08x = %lld \n", livetime(), livetime());
-      printf(" scalers:  prescaled = 0x%08x = %lld \n", prescaled(), prescaled());
-      printf(" scalers:  discarded = 0x%08x = %lld \n", discarded(), discarded());
-      printf(" scalers:  deadzone  = 0x%08x = %lld \n", deadzone(), deadzone());
+      printf(" scalers:  elapsed   = 0x%016llx = %llu \n", elapsed(), elapsed());
+      printf(" scalers:  livetime  = 0x%016llx = %llu \n", livetime(), livetime());
+      printf(" scalers:  prescaled = 0x%016llx = %llu \n", prescaled(), prescaled());
+      printf(" scalers:  discarded = 0x%016llx = %llu \n", discarded(), discarded());
+      printf(" scalers:  sequence  = 0x%016llx = %llu \n", sequence(), sequence());
+      printf(" scalers:  deadzone  = 0x%016llx = %llu \n", deadzone(), deadzone());
     }
 
   /// Output operator (ASCII)

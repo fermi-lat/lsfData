@@ -10,7 +10,7 @@
 /** @class LsfEvent::Configuration
 * @brief FIXME
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfConfiguration.h,v 1.2 2006/02/26 08:12:09 heather Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfConfiguration.h,v 1.3 2006/04/04 17:57:01 heather Exp $
 */
 
 namespace lsfData {
@@ -448,6 +448,8 @@ namespace lsfData {
         m_channel.clear();
      }
 
+    virtual Configuration* clone() const { return new LciAcdConfiguration( *this ); };
+
     /// This is a poor-man's dynamic cast
     virtual const LciAcdConfiguration* castToLciAcdConfig() const { return this; };    
 
@@ -617,6 +619,8 @@ namespace lsfData {
         m_channel.clear();
     }
 
+    virtual Configuration* clone() const { return new LciCalConfiguration( *this ); };
+
     /// This is a poor-man's dynamic cast
     virtual const LciCalConfiguration* castToLciCalConfig() const { return this; };    
 
@@ -625,6 +629,7 @@ namespace lsfData {
          printf("%s injected = %u\n", str.c_str(), m_injected);
          printf("%s delay = %u\n", str.c_str(), m_delay);
          printf("%s threshold = %u\n", str.c_str(), m_threshold);
+	 m_trigger.print( str.c_str() );
          m_channel.print();
      }
 
@@ -640,6 +645,7 @@ namespace lsfData {
                   << " injected = " << m_injected << std::endl
                   << " delay = " << m_delay << std::endl
                   << " threshold = " << m_threshold << std::endl
+	          << m_trigger
                   << m_channel << std::endl;
       }
 
@@ -735,6 +741,8 @@ namespace lsfData {
         m_threshold = 0;
         m_channel.clear();
     }
+
+    virtual Configuration* clone() const { return new LciTkrConfiguration( *this ); };
 
     /// This is a poor-man's dynamic cast
     virtual const LciTkrConfiguration* castToLciTkrConfig() const { return this; };    

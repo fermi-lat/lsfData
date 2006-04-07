@@ -5,7 +5,7 @@ namespace lsfData {
 
     /** @class LsfCcsds
       * @brief Local storage of error data
-      * $Header: /nfs/slac/g/glast/ground/cvs/ldfReader/ldfReader/data/ErrData.h,v 1.9 2005/06/10 06:17:45 heather Exp $
+      * $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfCcsds.h,v 1.1 2006/03/05 09:17:45 heather Exp $
     */
     class LsfCcsds {
     public:
@@ -24,9 +24,12 @@ namespace lsfData {
             m_utc = 0.0;
         };
 
-       void print() const {
+       void print(const std::string &str="") const {
+	 printf("%s scid = %d\n", str.c_str(), m_scid );
+	 printf("%s apid = %d\n", str.c_str(), m_apid );
+	 printf("%s utc  = %18.6f\n", str.c_str(), m_utc );
         }
-      
+
        void initialize(int scid, int apid, double utc) {
            m_scid = scid;
            m_apid = apid;
