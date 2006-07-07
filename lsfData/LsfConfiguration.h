@@ -10,7 +10,7 @@
 /** @class LsfEvent::Configuration
 * @brief FIXME
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfConfiguration.h,v 1.5 2006/04/11 17:59:28 heather Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfConfiguration.h,v 1.6 2006/04/14 08:07:21 heather Exp $
 */
 
 namespace lsfData {
@@ -197,6 +197,9 @@ namespace lsfData {
     inline bool zeroSuppression() const { 
         return (m_flags & enums::Lsf::ZERO_SUPPRESSION);}
 
+    /// Returns true if CALSTROBE is on
+    inline bool strobe() const { return (m_flags & enums::Lsf::STROBE); }
+
     /// Key which uniquely identifies the LCI software configuration 
     inline unsigned int softwareKey() const { return m_softwareKey; }
     
@@ -257,6 +260,18 @@ namespace lsfData {
     inline void setReadCfg( unsigned int value ) { m_readCfg = value; }  
     inline void setPeriod( unsigned int value ) { m_period = value; }
     inline void setFlags( unsigned int value ) { m_flags = value; }
+    inline void setAutoRange( bool value ) {
+      if ( value ) m_flags |= enums::Lsf::AUTORANGE;
+      else m_flags &= (~enums::Lsf::AUTORANGE);
+    }
+    inline void setZeroSuppression( bool value ) {
+      if ( value ) m_flags |= enums::Lsf::ZERO_SUPPRESSION;
+      else m_flags &= (~enums::Lsf::ZERO_SUPPRESSION);
+    }
+    inline void setStrobe( bool value ) {
+      if ( value ) m_flags |= enums::Lsf::STROBE;
+      else m_flags &= (~enums::Lsf::STROBE);
+    }
 
           
   private:
