@@ -10,7 +10,7 @@
 /** @class LsfEvent::Configuration
 * @brief FIXME
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfConfiguration.h,v 1.7 2006/07/07 16:52:55 blee Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfConfiguration.h,v 1.8 2008/03/24 02:29:42 heather Exp $
 */
 
 namespace lsfData {
@@ -673,10 +673,11 @@ namespace lsfData {
        other.period(), other.flags()),
        m_uld(other.uld()),m_injected(other.injected()),
        m_delay(other.delay()),m_firstRange(other.firstRange()),
+       m_threshold(other.threshold()),
        m_calibGain(other.calibGain()), m_highCalEna(other.highCalEna()),
        m_highRngEna(other.highRngEna()), m_highGain(other.highGain()),
        m_lowCalEna(other.lowCalEna()), m_lowRngEna(other.lowRngEna()),
-       m_lowGain(other.lowGain()), m_threshold(other.threshold()),
+       m_lowGain(other.lowGain()),
        m_trigger(other.trigger()),m_channel(other.channel()){
     }
 
