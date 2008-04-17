@@ -12,7 +12,7 @@
 
 /** @class MetaEvent
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfMetaEvent.h,v 1.2 2006/02/26 08:12:09 heather Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfMetaEvent.h,v 1.3 2007/04/19 03:28:51 blee Exp $
 */
 
 namespace lsfData {
@@ -119,6 +119,7 @@ namespace lsfData {
 
     // set the individual data members
     inline void setRun( const RunInfo& val) { m_run = val; };
+    inline void setRunDataTransferId(unsigned int id) { m_run.setDataTransferId(id); };
     inline void setDatagram( const DatagramInfo& val) { m_datagram = val; };
     inline void setScalers( const GemScalers& val) { m_scalers = val; };
     inline void setTime( const Time& val) { m_time = val; }; 
