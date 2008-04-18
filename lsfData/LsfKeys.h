@@ -6,7 +6,7 @@
  *
  * @author Bryson Lee <blee@slac.stanford.edu>
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfKeys.h,v 1.3 2007/10/08 15:10:37 heather Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfKeys.h,v 1.4 2008/04/17 19:47:45 heather Exp $
  */
 
 #ifndef lsfData_LsfKeys_H
@@ -106,8 +106,10 @@ namespace lsfData {
       return *this;
     }
 
+    void setSbs(unsigned int val) { m_sbs = val; }
     unsigned int sbs() const { return m_sbs; }
 
+    void setLpa_db(unsigned int val) { m_lpa_db = val; }
     unsigned int lpa_db() const { return m_lpa_db; }
 
    /// Output operator (ASCII)
