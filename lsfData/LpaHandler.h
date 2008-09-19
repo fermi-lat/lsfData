@@ -5,7 +5,7 @@
  *
  * @author Heather Kelly <heather@slac.stanford.edu>
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LpaHandler.h,v 1.8 2008/07/27 20:46:20 heather Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LpaHandler.h,v 1.9 2008/09/19 02:18:40 heather Exp $
  */
 
 #ifndef LSFDATA_LPAHANDLER_HH
@@ -425,6 +425,9 @@ public:
                 break;
               case 2:
                 m_gamma = new GammaRsdV2;
+                break;
+              case 3:
+                m_gamma = new GammaRsdV3;
                 break;
               default:
                 m_gamma = 0;
