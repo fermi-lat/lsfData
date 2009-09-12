@@ -10,7 +10,7 @@
 /** @class LsfEvent::Configuration
 * @brief FIXME
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfConfiguration.h,v 1.8 2008/03/24 02:29:42 heather Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfConfiguration.h,v 1.9 2008/04/17 19:47:45 heather Exp $
 */
 
 namespace lsfData {
@@ -40,9 +40,9 @@ namespace lsfData {
     virtual void clear() {
     }
 
-    virtual void print(const std::string &str="") const { }
+    virtual void print(const std::string &str="") const {printf("%s\n",str); }
 
-    friend std::ostream& operator<< ( std::ostream& s, const Configuration& o) {        return s;
+    friend std::ostream& operator<< ( std::ostream& s, const Configuration& /*o*/) {        return s;
     }
     
     // these cast to sub-classes

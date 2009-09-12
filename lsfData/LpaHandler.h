@@ -5,7 +5,7 @@
  *
  * @author Heather Kelly <heather@slac.stanford.edu>
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LpaHandler.h,v 1.9 2008/09/19 02:18:40 heather Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LpaHandler.h,v 1.10 2008/09/19 15:01:51 heather Exp $
  */
 
 #ifndef LSFDATA_LPAHANDLER_HH
@@ -41,9 +41,9 @@ namespace lsfData {
     enums::Lsf::HandlerId id() const { return m_id; }    
 
 
-    void print(const std::string &str="") const { }
+    void print(const std::string &str="") const { printf("%s\n", str);}
 
-    friend std::ostream& operator<< ( std::ostream& s, const LpaHandler& o) { return s; };
+    friend std::ostream& operator<< ( std::ostream& s, const LpaHandler& /*o*/) { return s; };
     
 
     void set(unsigned int masterKey, unsigned int cfgKey, unsigned int cfgId, 

@@ -1,7 +1,7 @@
 # -*- python -*-
-# $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/lsfData/SConscript,v 1.11 2009/01/23 00:07:09 ecephas Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/lsfData/SConscript,v 1.12 2009/08/25 23:24:21 jrb Exp $
 # Authors: Heather Kelly <heather@lheapop@gsfc.nasa.gov>
-# Version: lsfData-04-02-01
+# Version: lsfData-04-03-01
 Import('baseEnv')
 Import('listFiles')
 Import('packages')
