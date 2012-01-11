@@ -4,13 +4,14 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <cstdio>
 
 #include "enums/Lsf.h"
 
 /** @class LsfEvent::Configuration
 * @brief FIXME
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfConfiguration.h,v 1.10 2009/09/12 04:01:26 heather Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/lsfData/lsfData/LsfConfiguration.h,v 1.11 2009/09/12 05:02:30 heather Exp $
 */
 
 namespace lsfData {
