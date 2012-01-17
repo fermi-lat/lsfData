@@ -2,6 +2,7 @@
 #define LSFDATA_DATAGRAMINFO_H 1
 
 #include <iostream>
+#include <cstring>
 
 #include "enums/Lsf.h"
 
@@ -10,7 +11,7 @@
 *
 * 
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfDatagramInfo.h,v 1.1.1.1 2006/02/21 17:21:25 heather Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/lsfData/lsfData/LsfDatagramInfo.h,v 1.1.1.1 2006/02/25 08:38:50 heather Exp $
 */
 
 namespace lsfData {

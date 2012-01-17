@@ -4,11 +4,12 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <cstdio>
 
 /** @class Timehack
 * @brief FIXME
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfGemTime.h,v 1.1.1.1 2006/02/25 08:38:50 heather Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/lsfData/lsfData/LsfGemTime.h,v 1.2 2006/02/26 08:12:09 heather Exp $
 */
 
 namespace lsfData {

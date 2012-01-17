@@ -3,13 +3,14 @@
 
 #include <iostream>
 #include <string>
+#include <cstdio>
 
 #include "lsfData/LsfTimeTone.h"
 #include "lsfData/LsfGemTime.h"
 
 /** @class Time
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfTime.h,v 1.2 2006/02/26 08:12:09 heather Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/lsfData/lsfData/LsfTime.h,v 1.3 2006/08/30 20:00:37 blee Exp $
 */
 
 namespace lsfData {

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <cstring>
 
 #include "enums/Lsf.h"
 /** @class RunInfo
@@ -10,7 +11,7 @@
 *
 * 
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfRunInfo.h,v 1.2 2006/02/26 08:12:09 heather Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/lsfData/lsfData/LsfRunInfo.h,v 1.3 2008/04/17 16:30:22 heather Exp $
 */
 
 namespace lsfData {

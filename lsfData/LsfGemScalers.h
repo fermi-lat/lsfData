@@ -3,11 +3,12 @@
 
 #include <iostream>
 #include <iomanip>
+#include <cstdio>
 
 /** @class GemScalers
 * @brief FIXME
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/lsfData/lsfData/LsfGemScalers.h,v 1.2 2006/02/26 08:12:09 heather Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/lsfData/lsfData/LsfGemScalers.h,v 1.3 2006/04/07 23:53:40 blee Exp $
 */
 
 
