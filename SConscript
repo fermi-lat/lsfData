@@ -1,5 +1,5 @@
 # -*- python -*-
-# $Header: /nfs/slac/g/glast/ground/cvs/lsfData/SConscript,v 1.15 2010/06/13 07:02:12 jrb Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/GlastRelease-scons/lsfData/SConscript,v 1.16 2012/01/11 20:58:50 jrb Exp $
 # Authors: Heather Kelly <heather@lheapop@gsfc.nasa.gov>
 # Version: lsfData-04-03-03
 Import('baseEnv')
@@ -17,7 +17,7 @@ if progEnv['PLATFORM'] == 'win32':
     progEnv.AppendUnique(CPPDEFINES = ['__i386'])
 
 test_lsfData = progEnv.Program('test_lsfData',[ 'src/test/test_lsfData.cxx'])
-test_LSFReader = progEnv.Program('test_LSFReader',
+test_lsfDataReader = progEnv.Program('test_lsfDataReader',
                                  ['src/test/test_LSFReader.cxx'])
 #dumpEnv = progEnv.Clone()
 #dumpEnv.Tool('addLibrary', library = dumpEnv['ldfLibs'])
@@ -26,7 +26,8 @@ test_LSFReader = progEnv.Program('test_LSFReader',
 
 progEnv.Tool('registerTargets', package = 'lsfData',
              libraryCxts = [[lsfData, libEnv]],
-             testAppCxts =[[test_lsfData, progEnv], [test_LSFReader, progEnv]],
+             testAppCxts =[[test_lsfData, progEnv],
+                           [test_lsfDataReader, progEnv]],
              includes = listFiles(['lsfData/*.h']))
 
 
